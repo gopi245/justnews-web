@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "in.jarvistech.justnews",
+      "sha256_cert_fingerprints": [
+        "A1:50:02:20:1F:2B:87:4E:BF:CC:08:4A:CA:E7:5C:B2:9D:BB:0D:6F:62:F5:E6:47:87:C0:DB:9F:FC:84:76:79"
+      ]
+    }
+  }
+]
