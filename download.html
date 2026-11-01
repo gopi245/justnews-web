@@ -67,8 +67,8 @@
   <a href="/privacy.html">గోప్యతా విధానం</a> · <a href="/">వెబ్‌లో యాప్ చూడండి</a> · Jarvis Tech
 </footer>
 <script>
-  // Show the real latest version from the feed the app reads.
-  fetch('/news.json?t=' + Date.now()).then(r => r.json()).then(f => {
+  // Show the real latest version from the newsroom server (the feed the app reads); this site's copy is the fallback.
+  fetch('https://news.jarvistech.in/news.json?t=' + Date.now()).catch(() => fetch('/news.json?t=' + Date.now())).then(r => r.json()).then(f => {
     if (f.app && f.app.latestVersion) document.getElementById('ver').textContent = 'వెర్షన్ ' + f.app.latestVersion + ' · Android 7.0 (Nougat) పైన · వార్తలు: ' + new Date(f.generatedAt).toLocaleDateString('te-IN');
   }).catch(() => {});
 </script>
